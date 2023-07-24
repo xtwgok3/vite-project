@@ -26,6 +26,7 @@ function App() {
       </Helmet>
 
       <h1>Hola REACT</h1>
+      
       <form>
         <label htmlFor="busqueda">Buscar:</label>
         <input
