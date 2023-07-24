@@ -9,9 +9,9 @@ function VehicleView({ vehicle }) {
       <h2>{vehicle.description}</h2>
 
       <img src={vehicle.image} alt={vehicle.name + " image"} />*/}
-      
+
       <Helmet>
-        <title>{vehicle.name}</title>
+        <title>{vehicle.description}</title>
         <link rel="icon" type="image/png" href={vehicle.image} />
       </Helmet>
 

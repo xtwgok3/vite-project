@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Card from "./components/Card";
 import vehicles from "./data/vehicles";
+import { Helmet } from "react-helmet";
 
 function App() {
   const [searchText, setSearchText] = useState("");
@@ -19,8 +20,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hola REACT</h1>
+      <Helmet>
+        <title>Vite + React</title>
+        <link rel="icon" type="image/svg" href="https://xtwgok3.github.io/vite-project/vite.svg" />
+      </Helmet>
 
+      <h1>Hola REACT</h1>
       <form>
         <label htmlFor="busqueda">Buscar:</label>
         <input
