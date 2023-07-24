@@ -6,17 +6,17 @@ function base64Decode(encodedString) {
   return atob(encodedString);
 }
 
-function createBlobURL(decodedVideoFrame) {
-  const blob = new Blob([decodedVideoFrame], { type: "text/html" });
-  return URL.createObjectURL(blob);
+function createDataURL(decodedVideoFrame) {
+  const encodedHTML = encodeURIComponent(decodedVideoFrame);
+  return `data:text/html;charset=utf-8,${encodedHTML}`;
 }
 
 function VehicleView({ vehicle }) {
   // Decodificar la cadena Base64 contenida en vehicle.VideoFrame
   const decodedVideoFrame = base64Decode(vehicle.VideoFrame);
 
-  // Crear URL Blob a partir del contenido decodificado
-  const blobURL = createBlobURL(decodedVideoFrame);
+  // Crear URL de Datos (Data URL) a partir del contenido decodificado
+  const dataURL = createDataURL(decodedVideoFrame);
 
   return (
     <div className="VehicleView">
@@ -29,7 +29,7 @@ function VehicleView({ vehicle }) {
 
       <iframe
         allow="encrypted-media"
-        src={blobURL} // Utiliza la URL Blob como src
+        src={dataURL} // Utiliza la Data URL como src
         name="iframe"
         scrolling="no"
         allowFullScreen
