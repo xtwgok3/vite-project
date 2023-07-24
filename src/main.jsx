@@ -1,23 +1,29 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom'; // Utilizando BrowserRouter
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import vehicles from './data/vehicles.js';
 import VehicleView from './views/VehicleView.jsx';
 
-ReactDOM.render(
+const routes = [
+  {
+    path: "/",
+    element: <App />,
+  },
+];
+
+vehicles.forEach((vehicle) => {
+  routes.push({
+    path: vehicle.name,
+    element: <VehicleView vehicle={vehicle} />,
+  });
+});
+
+const router = createBrowserRouter(routes);
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Router basename="/vite-project/"> {/* Ajusta el basename para que funcione en GitHub Pages */}
-      <Route exact path="/" component={App} /> {/* Utiliza Route para renderizar el componente App */}
-      {vehicles.map((vehicle) => (
-        <Route
-          key={vehicle.name}
-          path={`/${vehicle.name}`}
-          render={() => <VehicleView vehicle={vehicle} />}
-        />
-      ))}
-    </Router>
+    <App />
   </React.StrictMode>,
-  document.getElementById('root')
-);
+)
