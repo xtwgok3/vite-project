@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
-import './index.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import vehicles from './data/vehicles.js';
-import VehicleView from './views/VehicleView.jsx';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import vehicles from "./data/vehicles";
+import VehicleView from "./views/VehicleView";
 
 const routes = [
   {
