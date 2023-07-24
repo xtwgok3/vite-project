@@ -17,7 +17,7 @@ git push -u origin main
    ```
 
 
-3. Crear ./github/workflows/deploy.yml (crea automaticamente GH-PAGES y en cada "git push" hace el deploy automatico.
+3. Crear ./github/workflows/deploy.yml       (crea automaticamente GH-PAGES y en cada "git push" hace el deploy automatico.
 ```
 name: Deploy
 
