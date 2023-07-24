@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'; // Utilizando
 import vehicles from './data/vehicles.js';
 import VehicleView from './views/VehicleView.jsx';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <React.StrictMode>
     <Router basename="/vite-project/"> {/* Ajusta el basename para que funcione en GitHub Pages */}
       <Route exact path="/" component={App} /> {/* Utiliza Route para renderizar el componente App */}
@@ -18,5 +18,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         />
       ))}
     </Router>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
