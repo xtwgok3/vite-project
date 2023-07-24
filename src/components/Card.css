@@ -1,0 +1,61 @@
+.Card {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #3333;
+    background-color: #444;
+    padding: 10px;
+    border: 2px solid #444;
+    display: flex;
+    align-items: center; 
+    margin: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .Card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    align-items: center;
+    display: flex;
+  }
+  
+  .Card:hover {
+    transform: scale(1.25);
+  }
+  
+  
+  @media only screen and (max-width: 768px) {
+    .Card img {
+      max-width: 100%;
+      height: auto;
+      align-items: center;
+      display: flex;
+    }
+    .Card {
+      width: 150px;
+      height: 150px;
+    }
+    form {
+      margin-top: -30px;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .Card img {
+      max-width: 100%;
+      height: auto;
+      align-items: center;
+      display: flex;
+    }
+    .Card {
+      width: 100px;
+      height: 100px;
+    }
+    form {
+      margin-top: auto;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+  }
+  
