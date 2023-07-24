@@ -1,5 +1,5 @@
-import "./Card.css";
-import { Link } from "react-router-dom";
+import './Card.css';
+import { Link } from 'react-router-dom';
 
 function Card({ title = "titulo por defecto", description = "descripcion por defecto" }) {
   return (

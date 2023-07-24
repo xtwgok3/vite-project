@@ -1,5 +1,5 @@
-import React from "react";
-import "./VehicleView.css";
+import React from 'react';
+import './VehicleView.css';
 
 function VehicleView({ vehicle }) {
   return (

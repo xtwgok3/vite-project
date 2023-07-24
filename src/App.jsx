@@ -1,6 +1,6 @@
-import "./App.css";
-import Card from "./components/Card.jsx";
-import vehicles from "./data/vehicles.js";
+import './App.css';
+import Card from './components/Card.jsx';
+import vehicles from './data/vehicles.js';
 
 function App() {
   const vehicleList = vehicles.map((v) => {
