@@ -68,7 +68,14 @@ jobs:
           publish_dir: ./dist
 ```
 
-4. edicion para que funcione en una pagina dinamica por nombre elemento en GithubPages
+4. Activar Script workflow
+```
+Config -> Actions -> General -> Workflow permissions -> Read and Write permissions 
+Actions -> failed deploy -> re-run-job failed jobs 
+Pages -> gh-pages -> save
+```
+
+5. edicion para que funcione en una pagina dinamica por nombre elemento en GithubPages
  ```
 import React from 'react';
 import ReactDOM from 'react-dom';
