@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import App from './App.jsx';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -8,7 +8,7 @@ import VehicleView from './views/VehicleView.jsx';
 
 const routes = [
   {
-    path: "/",
+    path: '/',
     element: <App />,
   },
 ];
@@ -20,14 +20,16 @@ vehicles.forEach((vehicle) => {
   });
 });
 
-const router = createBrowserRouter(routes);
+// Ajusta el basename para que funcione en GitHub Pages
+const router = createBrowserRouter({ basename: '/vite-project', routes });
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-<React.StrictMode>
-  <RouterProvider router={router}>
-    <App />
-  </RouterProvider>
-</React.StrictMode>
-  
-
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    {/* Agrega un elemento raíz aquí, por ejemplo, un div */}
+    <div>
+      <RouterProvider router={router}>
+        {/* También puedes poner otros componentes o elementos aquí si es necesario */}
+      </RouterProvider>
+    </div>
+  </React.StrictMode>
 );
