@@ -9,10 +9,14 @@ git branch -M main
 git remote add origin https://github.com/[USER]/[REPO_NAME] 
 git push -u origin main
 ```
+
+
 2. modificar base on vite.config
    ```
    base: "/[REPO_NAME]/"
    ```
+
+
 3. Crear ./github/workflows/deploy.yml (crea automaticamente GH-PAGES y en cada "git push" hace el deploy automatico.
 ```
 name: Deploy
@@ -68,12 +72,14 @@ jobs:
           publish_dir: ./dist
 ```
 
+
 4. Activar Script workflow
 ```
 Config -> Actions -> General -> Workflow permissions -> Read and Write permissions 
 Actions -> failed deploy -> re-run-job failed jobs 
 Pages -> gh-pages -> save
 ```
+
 
 5. edicion para que funcione en una pagina dinamica por nombre elemento en GithubPages
  ```
