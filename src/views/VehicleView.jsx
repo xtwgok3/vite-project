@@ -2,7 +2,12 @@ import React from "react";
 import "./VehicleView.css";
 import { Helmet } from "react-helmet";
 
+function base64Decode(encodedString) {
+  return atob(encodedString);
+}
+
 function VehicleView({ vehicle }) {
+  const asd = base64Decode(vehicle.VideoFrame);
   return (
     <div className="VehicleView">
       {/*<h1>{vehicle.name}</h1>
@@ -17,7 +22,7 @@ function VehicleView({ vehicle }) {
 
       <iframe
         allow="encrypted-media"
-        src={vehicle.VideoFrame}
+        src={asd}
         name="iframe"
         scrolling="no"
         allowFullScreen
