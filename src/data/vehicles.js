@@ -1,9 +1,10 @@
 const vehicles = [
   {
-    name: "Car",
-    description: "has four wheels",
+    name: "CARTOON",
+    description: "Cartoon Network",
     image:
-      "https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F0x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349",
+    "https://i.imgur.com/oQqB1Ei.png",
+    VideoFrame: "https://cabrillos.github.io/tc/fl.html?get=LmN2YXR0di5jb20uYXIvbGl2ZS9jM2Vkcy9DYXJ0b29uTmV0d29yay9TQV9MaXZlX2Rhc2hfZW5jXzJBL0NhcnRvb25OZXR3b3JrLm1wZA==&key=ZDdkZjU2ZWZhYTM2YTcxMTQxZDIzODg1NGNjNDZkMWQ=&key2=OGFiYjJlZTkxNTBkOGIyYWY4ZWJlYzBkZTBmODMzYzg=&lang=0",
   },
   {
     name: "Motorcycle",

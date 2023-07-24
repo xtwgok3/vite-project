@@ -1,13 +1,16 @@
-import './Card.css';
-import { Link } from 'react-router-dom';
+//Card.jsx
 
-function Card({ title = "titulo por defecto", description = "descripcion por defecto" }) {
+import "./Card.css";
+import { Link } from "react-router-dom";
+
+function Card({ title = "titulo por defecto", description = "descripcion por defecto", image, VideoFrame }) {
   return (
     <div className="Card">
-      <h2>
-        <Link to={title}>{title}</Link>
-      </h2>
-      <p>{description}</p>
+
+        <Link to={title}>
+          <img src={image} />
+        </Link>
+
     </div>
   );
 }
