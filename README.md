@@ -1,5 +1,3 @@
-# Curso React Deivchoi
-
 ## Instrucciones para ejecutar el proyecto
 
 1. Abrir la terminal
