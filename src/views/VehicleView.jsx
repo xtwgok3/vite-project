@@ -27,6 +27,7 @@ function VehicleView({ vehicle }) {
         scrolling="no"
         allowFullScreen
         alt={vehicle.name}
+        sandbox="allow-same-origin"
       ></iframe>
 
     </div>
