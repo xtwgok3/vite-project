@@ -23,7 +23,11 @@ vehicles.forEach((vehicle) => {
 const router = createBrowserRouter(routes);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-
-  <App />
+<React.StrictMode>
+  <RouterProvider router={router}>
+    <App />
+  </RouterProvider>
+</React.StrictMode>
+  
 
 );
