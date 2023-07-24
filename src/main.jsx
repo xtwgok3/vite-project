@@ -21,7 +21,7 @@ vehicles.forEach((vehicle) => {
 });
 
 // Ajusta el basename para que funcione en GitHub Pages
-const router = createBrowserRouter({ basename: '/vite-project', routes });
+const router = createBrowserRouter({ basename: '/vite-project/', routes });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
