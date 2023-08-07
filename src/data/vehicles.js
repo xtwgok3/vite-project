@@ -39,6 +39,13 @@ const vehicles = [
       "https://i.imgur.com/hL2YrRx.png",
     VideoFrame: "https://cabrillos.github.io/tc/fl.html?get=LmN2YXR0di5jb20uYXIvbGl2ZS9jN2Vkcy9IaXN0b3J5SEQvU0FfTGl2ZV9kYXNoX2VuY18yQS9IaXN0b3J5SEQubXBk&key=ZTgyMzE4ZTUxOGJhNzBjZWEzZDdiMzdiZWY5OWU2OTI=&key2=YTA1ZmNiNjM0YzA3MWE1MTRlMzAzOWUxYzI3NGI0ZGI=",
   },
+  {
+    name: "Magic-Kids",
+    description: "Magic-Kids",
+    image:
+      "https://magickids.site/_next/static/media/magickidslogo.d3955761.png",
+    VideoFrame: "https://magickids.site/tv",
+  },
 ];
 
 export default vehicles;
