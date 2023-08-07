@@ -46,6 +46,20 @@ const vehicles = [
       "https://magickids.site/_next/static/media/magickidslogo.d3955761.png",
     VideoFrame: "https://magickids.site/tv",
   },
+  {
+    name: "Samurai-Jack",
+    description: "Samurai-Jack",
+    image:
+      "samurai.png",
+    VideoFrame: "https://cabrillos.github.io/mi-pagina/d4.html?id=3",
+  },
+  {
+    name: "Primal",
+    description: "Primal",
+    image:
+      "src/data/primal.png",
+    VideoFrame: "https://cabrillos.github.io/mi-pagina/d4.html?id=4",
+  },
 ];
 
 export default vehicles;
