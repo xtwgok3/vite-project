@@ -50,14 +50,14 @@ const vehicles = [
     name: "Samurai-Jack",
     description: "Samurai-Jack",
     image:
-      "samurai.png",
+      "https://raw.githubusercontent.com/xtwgok3/vite-project/main/src/data/samurai.png",
     VideoFrame: "https://cabrillos.github.io/mi-pagina/d4.html?id=3",
   },
   {
     name: "Primal",
     description: "Primal",
     image:
-      "src/data/primal.png",
+      "https://raw.githubusercontent.com/xtwgok3/vite-project/main/src/data/primal.png",
     VideoFrame: "https://cabrillos.github.io/mi-pagina/d4.html?id=4",
   },
 ];
