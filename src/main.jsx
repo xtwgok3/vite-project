@@ -5,6 +5,11 @@ import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import vehicles from './data/vehicles.js';
 import VehicleView from './views/VehicleView.jsx';
+import { WebExtensionBlocker } from '@cliqz/adblocker-webextension';
+
+WebExtensionBlocker.fromPrebuiltAdsAndTracking().then((blocker) => {
+  blocker.enableBlockingInBrowser(browser);
+});
 
 const routes = [
   {
