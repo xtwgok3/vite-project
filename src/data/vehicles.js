@@ -92,15 +92,8 @@ const vehicles = [
     name: "Anime-Xtrema",
     description: "Anime-Xtrema",
     image:
-      "https://i.imgur.com/fDlkOBx.png",
-    VideoFrame: "https://cabrillos.github.io/mi-pagina/d4.html?id=9",
-  },
-  {
-    name: "Anime-Zone-Tv",
-    description: "Anime-Zone-Tv",
-    image:
       "https://i.imgur.com/yor5owS.png",
-    VideoFrame: "https://cabrillos.github.io/mi-pagina/d4.html?id=8",
+    VideoFrame: "https://cabrillos.github.io/mi-pagina/d4.html?id=9",
   },
 ];
 
