@@ -93,7 +93,7 @@ const vehicles = [
     description: "Anime-Xtrema",
     image:
       "https://i.imgur.com/yor5owS.png",
-    VideoFrame: "https://cabrillos.github.io/mi-pagina/d4.html?id=9",
+    VideoFrame: "https://ww1.cuevana3.ch/episodio/scorpion-1x22",
   },
 ];
 
