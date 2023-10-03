@@ -11,7 +11,7 @@ const vehicles = [
     description: "cap 2 temp 1",
     image: "IMG_URL",
     //VideoFrame: "https://server15.mxcdnab.online/newhls/e43f6f15da92bc1df2efe75cb5d652a6/EP.2.1.v0.1677514999.m3u8",
-    VideoFrame: "https://stream-4191-31-165.pvdcdn.co/kqohpvnyk4ikkfn2ma5p6pinmoz6ngkwofeuwyacpplm4bowdk66es5va4/v.mp4",
+    VideoFrame: "https://psy-e.000webhostapp.com/peli5.html",
     temp: "temp1",
   },
   {
