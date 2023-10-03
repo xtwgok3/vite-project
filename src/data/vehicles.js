@@ -10,7 +10,8 @@ const vehicles = [
     name: "scorpions 2",
     description: "cap 2 temp 1",
     image: "IMG_URL",
-    VideoFrame: "https://server15.mxcdnab.online/newhls/e43f6f15da92bc1df2efe75cb5d652a6/EP.2.1.v0.1677514999.m3u8",
+    //VideoFrame: "https://server15.mxcdnab.online/newhls/e43f6f15da92bc1df2efe75cb5d652a6/EP.2.1.v0.1677514999.m3u8",
+    VideoFrame: "https://povvvideo.cc/ir71zdj0z5cu",
     temp: "temp1",
   },
   {
