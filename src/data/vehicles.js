@@ -1,17 +1,17 @@
 const vehicles = [
   {
-    name: "Dragon Ball Super",
+    name: "Dragon-Ball-Super",
     description: "Dragon Ball Super",
     image:
-    "https://i.imgur.com/oQqB1Ei.png",
+    "https://e7.pngegg.com/pngimages/852/157/png-clipart-goku-super-dragon-ball-z-dragon-ball-collectible-card-game-majin-buu-trunks-goku-text-logo-thumbnail.png",
     VideoFrame: "https://www.telelatinohd.com/dragon-ball-super-24-horas-en-vivo.html",
   },
   {
-    name: "HBO",
+    name: "DIGIMON",
     description: "HBO",
     image:
-      "https://i.ibb.co/pLPD0WD/HBO.webp",
-    VideoFrame: "https://scabrillos.github.io/dtv/dtvc2.htm?get=Ly9kdHZvdHQtYWJjLmFrYW1haXplZC5uZXQvZGFzaF9saXZlXzExNDAvbWFuaWZlc3QubXBk&key=OTllZWZjMDY4ZGIzNTA5YjlmMGNmNWIzNDExNDIxOWQ=&key2=NmMyM2UzMWE0ZDgzYjU2OGU4NGFlYzYwOWE2M2ViYzk=",
+      "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQHbAgkPFYluaKB1F05vCCWiczwrKvtSss5Bq59U2Gm3arASoak",
+    VideoFrame: "https://www.telegratishd.com/digimon-24-horas-en-vivo.html",
   },
   {
     name: "HBO-2",
