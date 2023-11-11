@@ -72,7 +72,7 @@ const vehicles = [
     description: "Magic-Kids",
     image:
       "https://magickids.site/img/magickidslogo.png",
-    VideoFrame: "https://magickids.site/tv",
+    VideoFrame: "https://embed.smashystream.com/playere.php?imdb=tt10366206",
   },
   {
     name: "Samurai-Jack",
