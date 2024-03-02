@@ -89,6 +89,13 @@ const vehicles = [
     VideoFrame: "https://cabrillos.github.io/mi-pagina/d4.html?id=4",
   },
   {
+    name: "Primal",
+    description: "MLS",
+    image:
+      "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    VideoFrame: "https://tucanaldeportivo.com/canal10.php",
+  },
+  {
     name: "Anime-Xtrema",
     description: "Anime-Xtrema",
     image:
