@@ -3,7 +3,7 @@ import "./App.css";
 import Card from "./components/Card";
 import vehicles from "./data/vehicles";
 import { Helmet } from "react-helmet";
-import { injectCosmetics } from '@ghostery/adblocker-webextension-cosmetics';
+import { WebExtensionBlocker } from '@ghostery/adblocker-webextension';
 
 function App() {
   const [searchText, setSearchText] = useState("");
@@ -20,7 +20,10 @@ function App() {
   };
 
   useEffect(() => {
-    injectCosmetics();
+    // Initialize the adblocker
+    WebExtensionBlocker.fromPrebuiltAdsAndTracking().then((blocker) => {
+      blocker.enableBlockingInBrowser(browser); // Ensure `browser` is defined in your context
+    });
   }, []);
 
 
