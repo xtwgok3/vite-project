@@ -109,6 +109,13 @@ const vehicles = [
       "https://i.imgur.com/yor5owS.png",
     VideoFrame: "https://ww1.cuevana3.ch/episodio/scorpion-1x22",
   },
+  {
+    name: "DRAGON-BALL-S",
+    description: "DRAGON-BALL-BALL-S",
+    image:
+      "https://www.cablevisionhd.com/imge/dragonballsuper.png",
+    VideoFrame: "https://embed.sdfgnksbounce.com/embed2/dragonballsuper.html",
+  },
 ];
 
 export default vehicles;
