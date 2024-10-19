@@ -3,6 +3,7 @@ import "./App.css";
 import Card from "./components/Card";
 import vehicles from "./data/vehicles";
 import { Helmet } from "react-helmet";
+import { injectCosmetics } from '@ghostery/adblocker-webextension-cosmetics';
 
 function App() {
   const [searchText, setSearchText] = useState("");
@@ -17,6 +18,11 @@ function App() {
   const handleSearchChange = (event) => {
     setSearchText(event.target.value);
   };
+
+  useEffect(() => {
+    injectCosmetics();
+  }, []);
+
 
   return (
     <div className="App">
