@@ -96,8 +96,8 @@ const vehicles = [
     VideoFrame: "https://tucanaldeportivo.com/canal10.php",
   },
   {
-    name: "MLS",
-    description: "MLS",
+    name: "MLSs",
+    description: "MLsS",
     image:
       "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
     VideoFrame: "https://voodc.com/embed/858a93909c8b889387998388988798898792.html",
