@@ -7,7 +7,7 @@ export default defineConfig({
   base: "/vite-project/",
   build: {
     rollupOptions: {
-      external: ['@ghostery/adblocker-webextension-cosmetics'],
+      external: ['@ghostery/adblocker-webextension'],
     },
   },
 });
