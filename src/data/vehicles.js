@@ -103,6 +103,13 @@ const vehicles = [
     VideoFrame: "https://voodc.com/embed/858a93909c8b889387998388988798898792.html",
   },
   {
+    name: "MLS3",
+    description: "MLs3",
+    image:
+      "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    VideoFrame: "https://la12hd.com/vivo/canal.php?stream=mls1es",
+  },
+  {
     name: "Anime-Xtrema",
     description: "Anime-Xtrema",
     image:
