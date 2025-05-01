@@ -100,7 +100,7 @@ const vehicles = [
     description: "MLs2",
     image:
       "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
-    VideoFrame: "https://voodc.com/embed/858a93909c8b889387998388988798898792.html",
+    VideoFrame: "https://envivo1.com/canal.php?stream=disney1",
   },
   {
     name: "MLS3",
