@@ -123,6 +123,13 @@ const vehicles = [
       "https://www.cablevisionhd.com/imge/dragonballsuper.png",
     VideoFrame: "https://embed.sdfgnksbounce.com/embed2/dragonballsuper.html",
   },
+  {
+    name: "THUNDERBOTS",
+    description: "THUNDERBOLTS",
+    image:
+      "",
+    VideoFrame: "https://swiftplayers.com/e/6m37yni8emri",
+  },
 ];
 
 export default vehicles;
