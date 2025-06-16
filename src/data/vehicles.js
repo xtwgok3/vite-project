@@ -130,6 +130,41 @@ const vehicles = [
       "",
     VideoFrame: "https://swiftplayers.com/e/6m37yni8emri",
   },
+  {
+    name: "DSports",
+    description: "DSports",
+    image:
+      "",
+    VideoFrame: "https://stream196tp.com/global1.php?stream=dsports",
+  },
+  {
+    name: "DSports 2",
+    description: "DSports 2",
+    image:
+      "",
+    VideoFrame: "https://stream196tp.com/global1.php?stream=dsports2",
+  },
+  {
+    name: "DSports plus",
+    description: "DSports plus",
+    image:
+      "",
+    VideoFrame: "https://stream196tp.com/global1.php?stream=dsportsplus",
+  },
+  {
+    name: "TUDN",
+    description: "TUDN",
+    image:
+      "",
+    VideoFrame: "https://stream196tp.com/global1.php?stream=tudn_usa",
+  },
+  {
+    name: "DAZN TV",
+    description: "DAZN TV",
+    image:
+      "",
+    VideoFrame: "https://stream196tp.com/global1.php?stream=dazntv1",
+  },
 ];
 
 export default vehicles;
