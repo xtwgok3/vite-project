@@ -135,35 +135,40 @@ const vehicles = [
     description: "DSports",
     image:
       "",
-    VideoFrame: "https://stream196tp.com/global1.php?stream=dsports",
+    //VideoFrame: "https://stream196tp.com/global1.php?stream=dsports",
+    VideoFrame: "https://tiogol.com/vivo/canal.php?stream=dsports",
   },
   {
     name: "DSports 2",
     description: "DSports 2",
     image:
       "",
-    VideoFrame: "https://stream196tp.com/global1.php?stream=dsports2",
+    //VideoFrame: "https://stream196tp.com/global1.php?stream=dsports2",
+    VideoFrame: "https://tiogol.com/vivo/canal.php?stream=dsports2",
   },
   {
     name: "DSports plus",
     description: "DSports plus",
     image:
       "",
-    VideoFrame: "https://stream196tp.com/global1.php?stream=dsportsplus",
+    //VideoFrame: "https://stream196tp.com/global1.php?stream=dsportsplus",
+    VideoFrame: "https://tiogol.com/vivo/canal.php?stream=dsportsplus",
   },
   {
     name: "TUDN",
     description: "TUDN",
     image:
       "",
-    VideoFrame: "https://stream196tp.com/global1.php?stream=tudn_usa",
+    //VideoFrame: "https://stream196tp.com/global1.php?stream=tudn_usa",
+    VideoFrame: "https://tiogol.com/vivo/canal.php?stream=tudn_usa",
   },
   {
     name: "DAZN TV",
     description: "DAZN TV",
     image:
       "",
-    VideoFrame: "https://stream196tp.com/global1.php?stream=dazntv1",
+    //VideoFrame: "https://stream196tp.com/global1.php?stream=dazntv1",
+    VideoFrame: "https://tiogol.com/vivo/canal.php?stream=dazntv1",
   },
 ];
 
