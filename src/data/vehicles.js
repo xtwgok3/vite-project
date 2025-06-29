@@ -170,6 +170,14 @@ const vehicles = [
     //VideoFrame: "https://stream196tp.com/global1.php?stream=dazntv1",
     VideoFrame: "https://tiogol.com/vivo/canal.php?stream=dazntv1",
   },
+  {
+    name: "CHILEVISION",
+    description: "CHILEVISION",
+    image:
+      "",
+    //VideoFrame: "https://stream196tp.com/global1.php?stream=dazntv1",
+    VideoFrame: "https://cl-a9-p-e-pt11.cdn.mdstrm.com/live-stream-gdai/linear/hls/pa/event/V1j9hgJXRtKjBeFfx3xzFQ/stream/4487a9d4-cb6a-4bba-a1be-93a15621185f:DLS/master.m3u8",
+  },
 ];
 
 export default vehicles;
