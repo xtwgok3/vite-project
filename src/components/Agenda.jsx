@@ -5,7 +5,7 @@ const SOURCE_URL = "https://pelisjuanita.com/tv/api-agenda.php";
 const AGENDA_URL = `https://app-tizen.psy-electronics.com/?url=${encodeURIComponent(SOURCE_URL)}`;
 const EVENT_TTL = 2.5 * 60 * 60 * 1000;
 const PRIORITY_TEAMS = ["argentina", "boca", "inter miami", "inter de miami", "river", "aston villa", "inter de milan", "inter milan"];
-const EXCLUDED_COUNTRIES = ["costa rica", "colombia", "peru", "chile", "bolivia", "ecuador"];
+const EXCLUDED_COUNTRIES = ["costa rica", "colombia", "peru", "chile", "bolivia", "ecuador", "canada"];
 const ARGENTINA_TIME = new Intl.DateTimeFormat("es-AR", {
   timeZone: "America/Argentina/Buenos_Aires",
   hour: "2-digit",
