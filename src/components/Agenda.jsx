@@ -10,6 +10,7 @@ const CATEGORY_LOGOS = [
   { terms: ["tenis", "tennis"], url: "https://img.futbollibrehd.com.pe/uploads/Tenis_a5d5fcd1d1_594ebf0186.png" },
   { terms: ["boxeo", "boxing"], url: "https://img.futbollibrehd.com.pe/uploads/boxeo_2024_b15889ae93_ae58e10dcb.png" },
   { terms: ["argentina"], url: "https://img.futbollibrehd.com.pe/uploads/argentina_2bd748026e_628913fc18.png" },
+  { terms: ["brasil"], url: "https://img.futbollibrehd.com.pe/uploads/brasil_25a533e5f7_a1a1ef7a7c.png" },
   { terms: ["leagues cup", "league cup"], url: "https://img.futbollibrehd.com.pe/uploads/leagues_cup_f7b23c5e8d_a6922075d9.png" },
 ];
 const ARGENTINA_TIME = new Intl.DateTimeFormat("es-AR", {
