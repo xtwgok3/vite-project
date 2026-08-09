@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Card from "./components/Card";
+import Agenda from "./components/Agenda";
 import vehicles from "./data/vehicles";
 import { Helmet } from "react-helmet";
 
@@ -39,6 +40,8 @@ function App() {
           onChange={handleSearchChange}
         />
       </form>
+
+      <Agenda />
 
       <div className="container">{vehicleList}</div>
     </div>

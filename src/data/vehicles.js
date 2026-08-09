@@ -91,21 +91,22 @@ const vehicles = [
   {
     name: "FOXSPORT USA",
     description: "FOXSPORT USA",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/FOX_Sports_logo.svg/250px-FOX_Sports_logo.svg.png",
+    image:
+      "",
     //VideoFrame: "https://la12hd.com/vivo/canal.php?stream=disney5",
     VideoFrame: "https://futbollibre.ch/canales.php?stream=foxsports1_usa",
    },
   {
     name: "TUDN",
     description: "TUDN",
-    image: "https://pelisjuanita.com/tv/logos/tudn.png",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' rx='20' fill='%23191d24'/%3E%3Ctext x='160' y='105' text-anchor='middle' font-family='Arial,sans-serif' font-size='54' font-weight='700' fill='white'%3ETUDN%3C/text%3E%3C/svg%3E",
     //VideoFrame: "https://la12hd.com/vivo/canal.php?stream=disney5",
     VideoFrame: "https://futbollibre.ch/hd.php?stream=tudn",
    },
   {
     name: "TV",
-    description: "TV",
-    image: "https://pelisjuanita.com/tv/img/TV-Gratis2.png",
+    description: "Agenda deportiva",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' rx='20' fill='%23191d24'/%3E%3Ctext x='160' y='105' text-anchor='middle' font-family='Arial,sans-serif' font-size='48' font-weight='700' fill='%23e3f509'%3ETV GRATIS%3C/text%3E%3C/svg%3E",
     //VideoFrame: "https://la12hd.com/vivo/canal.php?stream=disney5",
     VideoFrame: "https://pelisjuanita.com/tv/agenda-deportiva",
     external: true,
