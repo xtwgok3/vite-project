@@ -89,26 +89,62 @@ const vehicles = [
     VideoFrame: "https://cabrillos.github.io/mi-pagina/d4.html?id=4",
   },
   {
+    name: "FOXSPORT USA",
+    description: "FOXSPORT USA",
+    image:
+      "",
+    //VideoFrame: "https://la12hd.com/vivo/canal.php?stream=disney5",
+    VideoFrame: "https://futbollibre.ch/canales.php?stream=foxsports1_usa",
+   },
+  {
+    name: "TUDN",
+    description: "TUDN",
+    image: "",
+    //VideoFrame: "https://la12hd.com/vivo/canal.php?stream=disney5",
+    VideoFrame: "https://futbollibre.ch/hd.php?stream=tudn",
+   },
+  {
     name: "MLS",
     description: "MLS",
     image:
       "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
     //VideoFrame: "https://la12hd.com/vivo/canal.php?stream=disney5",
-    VideoFrame: "https://futbol-libre.su/",
+    VideoFrame: "https://pelisjuanita.com/tv/agenda-deportiva",
+   },
+  {
+    name: "MLS1",
+    description: "MLs1",
+    image:
+      "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    VideoFrame: "https://futbollibre.ch/1.php?stream=mls1es",
   },
   {
     name: "MLS2",
     description: "MLs2",
     image:
       "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
-    VideoFrame: "https://librefutbol.su/eventos/?r=aHR0cHM6Ly9lbnZpdm8xLmNvbS9jYW5hbC5waHA/c3RyZWFtPWRpc25leTE=",
+    VideoFrame: "https://futbollibre.ch/1.php?stream=mls2en",
   },
   {
     name: "MLS3",
     description: "MLs3",
     image:
       "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
-    VideoFrame: "https://la12hd.com/vivo/canal.php?stream=mls1es",
+    VideoFrame: "https://futbollibre.ch/2.php?stream=mls3en",
+  },
+  {
+    name: "MLS4",
+    description: "MLs4",
+    image:
+      "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    VideoFrame: "https://futbollibre.ch/2.php?stream=mls4en",
+  },
+  {
+    name: "MLS5",
+    description: "MLs5",
+    image:
+      "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    VideoFrame: "https://streamx488.sbs/global2.php?channel=mls5",
   },
   {
     name: "Anime-Xtrema",
