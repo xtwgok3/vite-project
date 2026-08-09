@@ -99,7 +99,7 @@ const vehicles = [
   {
     name: "TUDN",
     description: "TUDN",
-    image: "",
+    image: "https://pelisjuanita.com/tv/logos/tudn.png",
     //VideoFrame: "https://la12hd.com/vivo/canal.php?stream=disney5",
     VideoFrame: "https://futbollibre.ch/hd.php?stream=tudn",
    },
