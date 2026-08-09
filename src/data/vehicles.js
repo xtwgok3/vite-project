@@ -1,5 +1,5 @@
 const vehicles = [
-  {
+  /*{
     name: "Dragon-Ball-Super",
     description: "Dragon Ball Super",
     image:
@@ -87,7 +87,7 @@ const vehicles = [
     image:
       "https://raw.githubusercontent.com/xtwgok3/vite-project/main/src/data/primal.png",
     VideoFrame: "https://cabrillos.github.io/mi-pagina/d4.html?id=4",
-  },
+  },*/
   {
     name: "FOXSPORT USA",
     description: "FOXSPORT USA",
@@ -114,50 +114,43 @@ const vehicles = [
   {
     name: "MLS1",
     description: "MLs1",
-    image:
-      "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
     VideoFrame: "https://futbollibre.ch/1.php?stream=mls1es",
   },
   {
     name: "MLS2",
     description: "MLs2",
-    image:
-      "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
     VideoFrame: "https://futbollibre.ch/1.php?stream=mls2en",
   },
   {
     name: "MLS3",
     description: "MLs3",
-    image:
-      "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
     VideoFrame: "https://futbollibre.ch/2.php?stream=mls3en",
   },
   {
     name: "MLS4",
     description: "MLs4",
-    image:
-      "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
     VideoFrame: "https://futbollibre.ch/2.php?stream=mls4en",
   },
   {
     name: "MLS5",
     description: "MLs5",
-    image:
-      "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
     VideoFrame: "https://streamx488.sbs/global2.php?channel=mls5",
-  },
+  }/*,
   {
     name: "Anime-Xtrema",
     description: "Anime-Xtrema",
-    image:
-      "https://i.imgur.com/yor5owS.png",
+    image: "https://i.imgur.com/yor5owS.png",
     VideoFrame: "https://ww1.cuevana3.ch/episodio/scorpion-1x22",
   },
   {
     name: "DRAGON-BALL-S",
     description: "DRAGON-BALL-BALL-S",
-    image:
-      "https://www.cablevisionhd.com/imge/dragonballsuper.png",
+    image: "https://www.cablevisionhd.com/imge/dragonballsuper.png",
     VideoFrame: "https://embed.sdfgnksbounce.com/embed2/dragonballsuper.html",
   },
   {
@@ -214,7 +207,7 @@ const vehicles = [
       "",
     //VideoFrame: "https://stream196tp.com/global1.php?stream=dazntv1",
     VideoFrame: "https://cl-a9-p-e-pt11.cdn.mdstrm.com/live-stream-gdai/linear/hls/pa/event/V1j9hgJXRtKjBeFfx3xzFQ/stream/4487a9d4-cb6a-4bba-a1be-93a15621185f:DLS/master.m3u8",
-  },
+  }*/,
 ];
 
 export default vehicles;
