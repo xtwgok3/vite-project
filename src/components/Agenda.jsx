@@ -3,6 +3,8 @@ import "./Agenda.css";
 
 const SOURCE_URL = "https://pelisjuanita.com/tv/api-agenda.php";
 const AGENDA_URL = `https://app-tizen.psy-electronics.com/?url=${encodeURIComponent(SOURCE_URL)}`;
+const EVENT_TTL = 2.5 * 60 * 60 * 1000;
+const MAX_VISIBLE_EVENTS = 3;
 
 const normalizeAgenda = (payload) => {
   if (!Array.isArray(payload?.data)) return [];
@@ -30,13 +32,16 @@ const normalizeAgenda = (payload) => {
         country,
         date: attributes.date_diary || "",
         time: String(attributes.diary_hour || "").slice(0, 5),
+        startsAt: new Date(`${attributes.date_diary}T${attributes.diary_hour}-03:00`).getTime(),
         homeScore: attributes.goles_local,
         awayScore: attributes.goles_visitante,
         status: attributes.promiedos_status || "",
         channels,
       };
     })
-    .sort((a, b) => `${a.date} ${a.time}`.localeCompare(`${b.date} ${b.time}`));
+    .filter((event) => Number.isFinite(event.startsAt) && event.startsAt >= Date.now() - EVENT_TTL)
+    .sort((a, b) => a.startsAt - b.startsAt)
+    .slice(0, MAX_VISIBLE_EVENTS);
 };
 
 function Agenda() {
