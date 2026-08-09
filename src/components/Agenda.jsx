@@ -1,10 +1,17 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import "./Agenda.css";
 
 const SOURCE_URL = "https://pelisjuanita.com/tv/api-agenda.php";
 const AGENDA_URL = `https://app-tizen.psy-electronics.com/?url=${encodeURIComponent(SOURCE_URL)}`;
 const EVENT_TTL = 2.5 * 60 * 60 * 1000;
-const MAX_VISIBLE_EVENTS = 3;
+const EVENTS_PER_PAGE = 3;
+const PRIORITY_TEAMS = ["argentina", "boca", "inter miami", "inter de miami", "river", "aston villa"];
+
+const normalizeText = (value) =>
+  String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
 
 const normalizeAgenda = (payload) => {
   if (!Array.isArray(payload?.data)) return [];
@@ -37,17 +44,18 @@ const normalizeAgenda = (payload) => {
         awayScore: attributes.goles_visitante,
         status: attributes.promiedos_status || "",
         channels,
+        priority: PRIORITY_TEAMS.some((team) => normalizeText(description).includes(team)),
       };
     })
     .filter((event) => Number.isFinite(event.startsAt) && event.startsAt >= Date.now() - EVENT_TTL)
-    .sort((a, b) => a.startsAt - b.startsAt)
-    .slice(0, MAX_VISIBLE_EVENTS);
+    .sort((a, b) => Number(b.priority) - Number(a.priority) || a.startsAt - b.startsAt);
 };
 
 function Agenda() {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [page, setPage] = useState(0);
 
   const loadAgenda = useCallback(async () => {
     setLoading(true);
@@ -59,6 +67,7 @@ function Agenda() {
 
       const result = normalizeAgenda(await response.json());
       setEvents(result);
+      setPage(0);
     } catch (loadError) {
       console.error("No se pudo cargar la agenda:", loadError);
       setError("No se pudo cargar la programación.");
@@ -70,6 +79,12 @@ function Agenda() {
   useEffect(() => {
     loadAgenda();
   }, [loadAgenda]);
+
+  const totalPages = Math.max(1, Math.ceil(events.length / EVENTS_PER_PAGE));
+  const visibleEvents = useMemo(
+    () => events.slice(page * EVENTS_PER_PAGE, (page + 1) * EVENTS_PER_PAGE),
+    [events, page]
+  );
 
   return (
     <section className="agenda" aria-labelledby="agenda-title">
@@ -83,8 +98,8 @@ function Agenda() {
       {!loading && !error && events.length === 0 && <p className="agenda-status">No hay partidos programados.</p>}
 
       <div className="agenda-list">
-        {events.map((event) => (
-          <article className="agenda-event" key={event.id}>
+        {visibleEvents.map((event) => (
+          <article className={`agenda-event${event.priority ? " agenda-priority" : ""}`} key={event.id}>
             <div className="agenda-ball" aria-hidden="true">⚽</div>
             <div className="agenda-info">
               {(event.category || event.date) && (
@@ -110,6 +125,18 @@ function Agenda() {
           </article>
         ))}
       </div>
+
+      {!loading && !error && events.length > EVENTS_PER_PAGE && (
+        <nav className="agenda-pagination" aria-label="Páginas de la agenda">
+          <button type="button" onClick={() => setPage((current) => Math.max(0, current - 1))} disabled={page === 0}>
+            Anterior
+          </button>
+          <span>{page + 1} / {totalPages}</span>
+          <button type="button" onClick={() => setPage((current) => Math.min(totalPages - 1, current + 1))} disabled={page >= totalPages - 1}>
+            Siguiente
+          </button>
+        </nav>
+      )}
     </section>
   );
 }
