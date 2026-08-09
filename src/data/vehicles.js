@@ -112,6 +112,14 @@ const vehicles = [
     external: true,
    },
   {
+    name: "TV",
+    description: "Agenda deportiva",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' rx='20' fill='%23191d24'/%3E%3Ctext x='160' y='105' text-anchor='middle' font-family='Arial,sans-serif' font-size='48' font-weight='700' fill='%23e3f509'%3ETV GRATIS%3C/text%3E%3C/svg%3E",
+    //VideoFrame: "https://la12hd.com/vivo/canal.php?stream=disney5",
+    VideoFrame: "https://tv.xtwgok.workers.dev/",
+    external: true,
+   },
+  {
     name: "MLS1",
     description: "MLs1",
     image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
