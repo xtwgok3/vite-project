@@ -1,11 +1,11 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./Agenda.css";
 
 const SOURCE_URL = "https://pelisjuanita.com/tv/api-agenda.php";
 const AGENDA_URL = `https://app-tizen.psy-electronics.com/?url=${encodeURIComponent(SOURCE_URL)}`;
 const EVENT_TTL = 2.5 * 60 * 60 * 1000;
-const EVENTS_PER_PAGE = 3;
 const PRIORITY_TEAMS = ["argentina", "boca", "inter miami", "inter de miami", "river", "aston villa"];
+const EXCLUDED_COUNTRIES = ["costa rica", "colombia", "peru", "chile"];
 
 const normalizeText = (value) =>
   String(value || "")
@@ -23,6 +23,9 @@ const normalizeAgenda = (payload) => {
       const competition = separator >= 0 ? description.slice(0, separator).trim() : "";
       const title = separator >= 0 ? description.slice(separator + 1).trim() : description;
       const country = attributes.country?.data?.attributes?.name || "";
+      const status = String(attributes.promiedos_status || "").trim();
+      const priority = PRIORITY_TEAMS.some((team) => normalizeText(description).includes(team));
+      const live = Boolean(status) && !/^(final|prog\.?|no encontrado)$/i.test(status);
 
       const channels = (attributes.embeds?.data || [])
         .filter((embed) => embed.attributes?.embed_iframe)
@@ -42,20 +45,28 @@ const normalizeAgenda = (payload) => {
         startsAt: new Date(`${attributes.date_diary}T${attributes.diary_hour}-03:00`).getTime(),
         homeScore: attributes.goles_local,
         awayScore: attributes.goles_visitante,
-        status: attributes.promiedos_status || "",
+        status,
         channels,
-        priority: PRIORITY_TEAMS.some((team) => normalizeText(description).includes(team)),
+        priority,
+        live,
+        excludedCountry: EXCLUDED_COUNTRIES.includes(normalizeText(country)),
       };
     })
-    .filter((event) => Number.isFinite(event.startsAt) && event.startsAt >= Date.now() - EVENT_TTL)
-    .sort((a, b) => Number(b.priority) - Number(a.priority) || a.startsAt - b.startsAt);
+    .filter((event) => Number.isFinite(event.startsAt))
+    .filter((event) => event.live || event.startsAt >= Date.now() - EVENT_TTL)
+    .filter((event) => !event.excludedCountry || event.priority)
+    .sort(
+      (a, b) =>
+        Number(b.priority) - Number(a.priority) ||
+        Number(b.live) - Number(a.live) ||
+        a.startsAt - b.startsAt
+    );
 };
 
 function Agenda() {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [page, setPage] = useState(0);
 
   const loadAgenda = useCallback(async () => {
     setLoading(true);
@@ -67,7 +78,6 @@ function Agenda() {
 
       const result = normalizeAgenda(await response.json());
       setEvents(result);
-      setPage(0);
     } catch (loadError) {
       console.error("No se pudo cargar la agenda:", loadError);
       setError("No se pudo cargar la programación.");
@@ -79,12 +89,6 @@ function Agenda() {
   useEffect(() => {
     loadAgenda();
   }, [loadAgenda]);
-
-  const totalPages = Math.max(1, Math.ceil(events.length / EVENTS_PER_PAGE));
-  const visibleEvents = useMemo(
-    () => events.slice(page * EVENTS_PER_PAGE, (page + 1) * EVENTS_PER_PAGE),
-    [events, page]
-  );
 
   return (
     <section className="agenda" aria-labelledby="agenda-title">
@@ -98,7 +102,7 @@ function Agenda() {
       {!loading && !error && events.length === 0 && <p className="agenda-status">No hay partidos programados.</p>}
 
       <div className="agenda-list">
-        {visibleEvents.map((event) => (
+        {events.map((event) => (
           <article className={`agenda-event${event.priority ? " agenda-priority" : ""}`} key={event.id}>
             <div className="agenda-ball" aria-hidden="true">⚽</div>
             <div className="agenda-info">
@@ -126,17 +130,6 @@ function Agenda() {
         ))}
       </div>
 
-      {!loading && !error && events.length > EVENTS_PER_PAGE && (
-        <nav className="agenda-pagination" aria-label="Páginas de la agenda">
-          <button type="button" onClick={() => setPage((current) => Math.max(0, current - 1))} disabled={page === 0}>
-            Anterior
-          </button>
-          <span>{page + 1} / {totalPages}</span>
-          <button type="button" onClick={() => setPage((current) => Math.min(totalPages - 1, current + 1))} disabled={page >= totalPages - 1}>
-            Siguiente
-          </button>
-        </nav>
-      )}
     </section>
   );
 }
