@@ -6,6 +6,18 @@ const AGENDA_URL = `https://app-tizen.psy-electronics.com/?url=${encodeURICompon
 const EVENT_TTL = 2.5 * 60 * 60 * 1000;
 const PRIORITY_TEAMS = ["argentina", "boca", "inter miami", "inter de miami", "river", "aston villa"];
 const EXCLUDED_COUNTRIES = ["costa rica", "colombia", "peru", "chile"];
+const ARGENTINA_TIME = new Intl.DateTimeFormat("es-AR", {
+  timeZone: "America/Argentina/Buenos_Aires",
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: false,
+});
+const ARGENTINA_DATE = new Intl.DateTimeFormat("sv-SE", {
+  timeZone: "America/Argentina/Buenos_Aires",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
 
 const normalizeText = (value) =>
   String(value || "")
@@ -26,6 +38,8 @@ const normalizeAgenda = (payload) => {
       const status = String(attributes.promiedos_status || "").trim();
       const priority = PRIORITY_TEAMS.some((team) => normalizeText(description).includes(team));
       const live = Boolean(status) && !/^(final|prog\.?|no encontrado)$/i.test(status);
+      const sourceDate = new Date(`${attributes.date_diary}T${attributes.diary_hour}-05:00`);
+      const startsAt = sourceDate.getTime();
 
       const channels = (attributes.embeds?.data || [])
         .filter((embed) => embed.attributes?.embed_iframe)
@@ -40,9 +54,9 @@ const normalizeAgenda = (payload) => {
         title,
         category: competition || country,
         country,
-        date: attributes.date_diary || "",
-        time: String(attributes.diary_hour || "").slice(0, 5),
-        startsAt: new Date(`${attributes.date_diary}T${attributes.diary_hour}-03:00`).getTime(),
+        date: Number.isFinite(startsAt) ? ARGENTINA_DATE.format(sourceDate) : "",
+        time: Number.isFinite(startsAt) ? ARGENTINA_TIME.format(sourceDate) : "",
+        startsAt,
         homeScore: attributes.goles_local,
         awayScore: attributes.goles_visitante,
         status,
