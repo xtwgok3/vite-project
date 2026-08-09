@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect, useState } from "react";
 import "./Agenda.css";
 
-const AGENDA_URL = "https://pelisjuanita.com/tv/api-agenda.php";
+const SOURCE_URL = "https://pelisjuanita.com/tv/api-agenda.php";
+const AGENDA_URL = `https://app-tizen.psy-electronics.com/?url=${encodeURIComponent(SOURCE_URL)}`;
 
 const normalizeAgenda = (payload) => {
   if (!Array.isArray(payload?.data)) return [];
