@@ -6,12 +6,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import vehicles from './data/vehicles.js';
 import VehicleView from './views/VehicleView.jsx';
 
-import { WebExtensionBlocker } from '@ghostery/adblocker-webextension';
-
-WebExtensionBlocker.fromPrebuiltAdsAndTracking().then((blocker) => {
-  blocker.enableBlockingInBrowser(browser);
-});
-
 const routes = [
   {
     path: "/vite-project/", // Ruta para la página de inicio, agrega el basename aquí

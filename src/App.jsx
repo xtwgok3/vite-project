@@ -12,7 +12,7 @@ function App() {
   const filteredVehicles = vehicles.filter((v) => v.name.toLowerCase().includes(searchText.toLowerCase()));
   
   const vehicleList = filteredVehicles.map((v) => {
-    return <Card key={v.name} title={v.name} description={v.description} image={v.image} video={v.VideoFrame} />;
+    return <Card key={v.name} title={v.name} image={v.image} video={v.VideoFrame} external={v.external} />;
   });
 
   const handleSearchChange = (event) => {

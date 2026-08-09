@@ -11,6 +11,7 @@
   margin: 10px;
   flex-wrap: wrap;
   justify-content: center;
+  transition: transform 0.2s ease;
 }
 
 .Card img {
@@ -21,8 +22,10 @@
   display: flex;
 }
 
-.Card:hover {
-  transform: scale(1.25);
+@media (hover: hover) and (pointer: fine) {
+  .Card:hover {
+    transform: scale(1.08);
+  }
 }
 
 
