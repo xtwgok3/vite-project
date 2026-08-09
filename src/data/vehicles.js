@@ -106,8 +106,7 @@ const vehicles = [
   {
     name: "TV",
     description: "TV",
-    image:
-      "https://pelisjuanita.com/tv/img/TV-Gratis2.png",
+    image: "https://pelisjuanita.com/tv/img/TV-Gratis2.png",
     //VideoFrame: "https://la12hd.com/vivo/canal.php?stream=disney5",
     VideoFrame: "https://pelisjuanita.com/tv/agenda-deportiva",
     external: true,
