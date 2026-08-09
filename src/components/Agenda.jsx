@@ -4,8 +4,8 @@ import "./Agenda.css";
 const SOURCE_URL = "https://pelisjuanita.com/tv/api-agenda.php";
 const AGENDA_URL = `https://app-tizen.psy-electronics.com/?url=${encodeURIComponent(SOURCE_URL)}`;
 const EVENT_TTL = 2.5 * 60 * 60 * 1000;
-const PRIORITY_TEAMS = ["argentina", "boca", "inter miami", "inter de miami", "river", "aston villa"];
-const EXCLUDED_COUNTRIES = ["costa rica", "colombia", "peru", "chile"];
+const PRIORITY_TEAMS = ["argentina", "boca", "inter miami", "inter de miami", "river", "aston villa", "inter de milan", "inter milan"];
+const EXCLUDED_COUNTRIES = ["costa rica", "colombia", "peru", "chile", "bolivia", "ecuador", "canada"];
 const CATEGORY_LOGOS = [
   { terms: ["tenis", "tennis"], url: "https://img.futbollibrehd.com.pe/uploads/Tenis_a5d5fcd1d1_594ebf0186.png" },
   { terms: ["boxeo", "boxing"], url: "https://img.futbollibrehd.com.pe/uploads/boxeo_2024_b15889ae93_ae58e10dcb.png" },
