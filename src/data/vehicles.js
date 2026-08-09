@@ -91,8 +91,7 @@ const vehicles = [
   {
     name: "FOXSPORT USA",
     description: "FOXSPORT USA",
-    image:
-      "",
+    image: "https://www.foxdeportes.com/assets/images/logo.svg",
     //VideoFrame: "https://la12hd.com/vivo/canal.php?stream=disney5",
     VideoFrame: "https://futbollibre.ch/canales.php?stream=foxsports1_usa",
    },
