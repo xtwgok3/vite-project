@@ -4,8 +4,14 @@ import "./Agenda.css";
 const SOURCE_URL = "https://pelisjuanita.com/tv/api-agenda.php";
 const AGENDA_URL = `https://app-tizen.psy-electronics.com/?url=${encodeURIComponent(SOURCE_URL)}`;
 const EVENT_TTL = 2.5 * 60 * 60 * 1000;
-const PRIORITY_TEAMS = ["argentina", "boca", "inter miami", "inter de miami", "river", "aston villa", "inter de milan", "inter milan"];
-const EXCLUDED_COUNTRIES = ["costa rica", "colombia", "peru", "chile", "bolivia", "ecuador", "canada"];
+const PRIORITY_TEAMS = ["argentina", "boca", "inter miami", "inter de miami", "river", "aston villa"];
+const EXCLUDED_COUNTRIES = ["costa rica", "colombia", "peru", "chile"];
+const CATEGORY_LOGOS = [
+  { terms: ["tenis", "tennis"], url: "https://img.futbollibrehd.com.pe/uploads/Tenis_a5d5fcd1d1_594ebf0186.png" },
+  { terms: ["boxeo", "boxing"], url: "https://img.futbollibrehd.com.pe/uploads/boxeo_2024_b15889ae93_ae58e10dcb.png" },
+  { terms: ["argentina"], url: "https://img.futbollibrehd.com.pe/uploads/argentina_2bd748026e_628913fc18.png" },
+  { terms: ["leagues cup", "league cup"], url: "https://img.futbollibrehd.com.pe/uploads/leagues_cup_f7b23c5e8d_a6922075d9.png" },
+];
 const ARGENTINA_TIME = new Intl.DateTimeFormat("es-AR", {
   timeZone: "America/Argentina/Buenos_Aires",
   hour: "2-digit",
@@ -40,6 +46,8 @@ const normalizeAgenda = (payload) => {
       const live = Boolean(status) && !/^(final|prog\.?|no encontrado)$/i.test(status);
       const sourceDate = new Date(`${attributes.date_diary}T${attributes.diary_hour}-05:00`);
       const startsAt = sourceDate.getTime();
+      const logoSearch = normalizeText(`${competition} ${country} ${description}`);
+      const logo = CATEGORY_LOGOS.find(({ terms }) => terms.some((term) => logoSearch.includes(term)))?.url || "";
 
       const channels = (attributes.embeds?.data || [])
         .filter((embed) => embed.attributes?.embed_iframe)
@@ -63,6 +71,7 @@ const normalizeAgenda = (payload) => {
         channels,
         priority,
         live,
+        logo,
         excludedCountry: EXCLUDED_COUNTRIES.includes(normalizeText(country)),
       };
     })
@@ -118,7 +127,9 @@ function Agenda() {
       <div className="agenda-list">
         {events.map((event) => (
           <article className={`agenda-event${event.priority ? " agenda-priority" : ""}`} key={event.id}>
-            <div className="agenda-ball" aria-hidden="true">⚽</div>
+            <div className="agenda-ball" aria-hidden="true">
+              {event.logo ? <img src={event.logo} alt="" /> : "⚽"}
+            </div>
             <div className="agenda-info">
               {(event.category || event.date) && (
                 <span className="agenda-meta">{[event.category, event.date].filter(Boolean).join(" · ")}</span>

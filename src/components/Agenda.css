@@ -46,7 +46,19 @@
   background: #292e36;
 }
 .agenda-priority { border: 1px solid #e3f509; }
-.agenda-ball { font-size: 24px; }
+.agenda-ball {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 34px;
+  font-size: 24px;
+}
+.agenda-ball img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
 .agenda-info { display: flex; flex: 1; flex-direction: column; min-width: 0; }
 .agenda-meta { color: #b7bec9; font-size: 0.8rem; }
 .agenda-channels { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
