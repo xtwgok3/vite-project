@@ -104,10 +104,10 @@ const vehicles = [
     VideoFrame: "https://futbollibre.ch/hd.php?stream=tudn",
    },
   {
-    name: "MLS",
-    description: "MLS",
+    name: "TV",
+    description: "TV",
     image:
-      "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+      "https://pelisjuanita.com/tv/img/TV-Gratis2.png",
     //VideoFrame: "https://la12hd.com/vivo/canal.php?stream=disney5",
     VideoFrame: "https://pelisjuanita.com/tv/agenda-deportiva",
     external: true,
