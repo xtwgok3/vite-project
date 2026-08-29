@@ -125,6 +125,12 @@ const vehicles = [
     VideoFrame: "https://futbollibre.ch/1.php?stream=mls1es",
   },
   {
+    name: "MLS2aa",
+    description: "MLs2aa",
+    image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    VideoFrame: "https://la18hd.su/vivo/canal.php?stream=mls2en",
+  },
+  {
     name: "MLS2",
     description: "MLs2",
     image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
