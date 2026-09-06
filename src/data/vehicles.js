@@ -117,7 +117,13 @@ const vehicles = [
     //VideoFrame: "https://la12hd.com/vivo/canal.php?stream=disney5",
     VideoFrame: "https://tv.xtwgok.workers.dev/",
     external: true,
-   },
+    },
+  {
+    name: "MLSsss",
+    description: "MLs",
+    image: "",
+    VideoFrame: "https://tvf90.com/1.php?stream=mls1es",
+  },
   {
     name: "MLS1",
     description: "MLs1",
