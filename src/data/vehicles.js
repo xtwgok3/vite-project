@@ -161,7 +161,6 @@ const vehicles = [
     description: "MLs5",
     image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
     VideoFrame: "https://streamxhd.st/live1.php?stream=appletv5",
-  }
   },
   {
     name: "MLS6",
