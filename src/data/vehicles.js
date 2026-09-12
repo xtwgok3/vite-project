@@ -122,7 +122,7 @@ const vehicles = [
     name: "MLSsss",
     description: "MLs",
     image: "",
-    VideoFrame: "https://tvf90.com/1.php?stream=mls1es",
+    VideoFrame: "https://streamxhd.st/live1.php?stream=appletv1",
     external: true,
   },
   {
