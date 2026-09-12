@@ -129,7 +129,7 @@ const vehicles = [
     name: "MLS1",
     description: "MLs1",
     image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
-    VideoFrame: "https://futbollibre.ch/1.php?stream=mls1es",
+    VideoFrame: "https://streamxhd.st/live1.php?stream=appletv1",
   },
   {
     name: "MLS2aa",
@@ -142,26 +142,59 @@ const vehicles = [
     name: "MLS2",
     description: "MLs2",
     image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
-    VideoFrame: "https://futbollibre.ch/1.php?stream=mls2en",
+    VideoFrame: "https://streamxhd.st/live1.php?stream=appletv2",
   },
   {
     name: "MLS3",
     description: "MLs3",
     image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
-    VideoFrame: "https://futbollibre.ch/2.php?stream=mls3en",
+    VideoFrame: "https://streamxhd.st/live1.php?stream=appletv3",
   },
   {
     name: "MLS4",
     description: "MLs4",
     image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
-    VideoFrame: "https://futbollibre.ch/2.php?stream=mls4en",
+    VideoFrame: "https://streamxhd.st/live1.php?stream=appletv4",
   },
   {
     name: "MLS5",
     description: "MLs5",
     image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
-    VideoFrame: "https://streamx488.sbs/global2.php?channel=mls5",
-  }/*,
+    VideoFrame: "https://streamxhd.st/live1.php?stream=appletv5",
+  }
+  },
+  {
+    name: "MLS6",
+    description: "MLs6",
+    image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    VideoFrame: "https://streamxhd.st/live1.php?stream=appletv6",
+  },
+  {
+    name: "MLS7",
+    description: "MLs7",
+    image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    VideoFrame: "https://streamxhd.st/live1.php?stream=appletv7",
+  },
+  {
+    name: "MLS8",
+    description: "MLs7",
+    image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    VideoFrame: "https://streamxhd.st/live1.php?stream=appletv8",
+  },
+  {
+    name: "MLS9",
+    description: "MLs9",
+    image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    VideoFrame: "https://streamxhd.st/live1.php?stream=appletv9",
+  },
+  {
+    name: "MLS10",
+    description: "MLs10",
+    image: "https://cdn.freebiesupply.com/images/large/2x/mls-logo-black-and-white.png",
+    VideoFrame: "https://streamxhd.st/live1.php?stream=appletv10",
+  }
+  
+  /*,
   {
     name: "Anime-Xtrema",
     description: "Anime-Xtrema",
